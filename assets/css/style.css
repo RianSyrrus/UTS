@@ -1,0 +1,148 @@
+/* ---------- Google Fonts (fallback jika tidak ada di view) --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ---------- Base -------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f8fafc; /* slate-50 */
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* ---------- Scrollbar --------------------------------------- */
+::-webkit-scrollbar          { width: 6px; }
+::-webkit-scrollbar-track    { background: #f1f5f9; }
+::-webkit-scrollbar-thumb    { background: #94a3b8; border-radius: 3px; }
+
+/* ---------- Navbar ------------------------------------------ */
+.navbar-shadow {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Hero / Page-header background ------------------- */
+.hero-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f4c75 100%);
+}
+
+/* ---------- Cards ------------------------------------------- */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Buttons ----------------------------------------- */
+.btn-primary {
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+.btn-primary:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Skeleton loader --------------------------------- */
+.skeleton {
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ---------- Star rating ------------------------------------- */
+.star { color: #f59e0b; }
+
+/* ---------- Filter chips (katalog) -------------------------- */
+.filter-chip {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.filter-chip:hover {
+    background: #1e40af;
+    color: white;
+    border-color: #1e40af;
+}
+.filter-chip.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* ---------- Range input (katalog filter) -------------------- */
+input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #cbd5e1;
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2563eb;
+    cursor: pointer;
+}
+
+/* ---------- Image zoom (detail page) ----------------------- */
+.img-zoom {
+    transition: transform 0.4s ease;
+}
+.img-zoom:hover {
+    transform: scale(1.06);
+}
+
+/* ---------- Quantity input (detail / cart) ----------------- */
+.qty-btn {
+    transition: background 0.2s ease;
+}
+.qty-btn:hover {
+    background: #1e40af;
+    color: white;
+}
+
+/* ---------- Toast notification ----------------------------- */
+.toast-enter {
+    animation: toastIn 0.3s ease forwards;
+}
+@keyframes toastIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Badge label ------------------------------------ */
+.badge-hot  { background: #ef4444; color: white; font-size: 11px; padding: 2px 8px; border-radius: 999px; }
+.badge-new  { background: #22c55e; color: white; font-size: 11px; padding: 2px 8px; border-radius: 999px; }
+.badge-sale { background: #f59e0b; color: white; font-size: 11px; padding: 2px 8px; border-radius: 999px; }
+
+/* ---------- Tab active (detail page) ----------------------- */
+.tab-btn {
+    transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* ---------- Responsive helpers ----------------------------- */
+@media (max-width: 640px) {
+    .hide-mobile { display: none !important; }
+}
+@media (min-width: 641px) {
+    .hide-desktop { display: none !important; }
+}
