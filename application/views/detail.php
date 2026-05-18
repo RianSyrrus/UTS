@@ -67,7 +67,7 @@
 
     <!-- Pass product ID dari CI3 ke React -->
     <script>
-        var PRODUCT_ID = <?= (int)$product_id ?>;
+        var PRODUCT_ID = parseInt(window.location.pathname.split('/').pop()) || 1;
     </script>
 
     <script type="text/babel">
