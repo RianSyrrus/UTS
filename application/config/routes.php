@@ -53,3 +53,7 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['katalog'] = 'home/katalog';
+$route['detail/(:num)'] = 'home/detail/$1';
+$route['cart']             = 'home/cart';
+$route['login']            = 'home/login';
+$route['checkout']         = 'home/checkout';
