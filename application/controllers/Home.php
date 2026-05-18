@@ -14,12 +14,12 @@ class Home extends CI_Controller
     public function index()
     {
         // Memanggil file codingan kamu yang ada di folder views
-        $this->load->view('Home');
+        $this->load->view('home');
     }
 
     public function katalog()
     {
         // Perhatikan huruf K kapital, harus sama dengan nama file di folder views
-        $this->load->view('Katalog');
+        $this->load->view('katalog');
     }
 }

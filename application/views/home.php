@@ -232,7 +232,7 @@ $this->load->view('templates/header'); ?>
         /* =====================
            FOOTER
         ===================== */
-        function Footer() {
+       function Footer() {
             return (
                 <footer className="bg-slate-800 text-slate-300 mt-16">
                     <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -254,14 +254,14 @@ $this->load->view('templates/header'); ?>
                         <div>
                             <h4 className="text-white font-semibold mb-3">Kontak</h4>
                             <ul className="space-y-2 text-sm">
-                                <li>📧 shopku@email.com</li>
-                                <li>📱 0812-3456-7890</li>
-                                <li>📍 Kudus, Jawa Tengah</li>
+                                <li>📧 oiqgamink27@gmail.com</li>
+                                <li>📱 0877-0445-1209</li>
+                                <li>📍 AMIKOM    YOGYAKARTA</li>
                             </ul>
                         </div>
                     </div>
                     <div className="border-t border-slate-700 text-center py-4 text-sm text-slate-500">
-                        © 2024 ShopKu. All rights reserved.
+                        © 2026 ShopKu. All rights reserved.
                     </div>
                 </footer>
             );
