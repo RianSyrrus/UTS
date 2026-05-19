@@ -3,75 +3,75 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShopKu - Detail Produk</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'DM Sans', sans-serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopKu - Detail Produk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+    }
 
-        h1,
-        h2,
-        h3 {
-            font-family: 'Playfair Display', serif;
-        }
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+    }
 
-        .navbar-shadow {
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
-        }
+    .navbar-shadow {
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    }
 
-        .skeleton {
-            background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
-            background-size: 200% 100%;
-            animation: shimmer 1.5s infinite;
-        }
+    .skeleton {
+      background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+    }
 
-        @keyframes shimmer {
-            0% {
-                background-position: 200% 0;
-            }
+    @keyframes shimmer {
+      0% {
+        background-position: 200% 0;
+      }
 
-            100% {
-                background-position: -200% 0;
-            }
-        }
+      100% {
+        background-position: -200% 0;
+      }
+    }
 
-        .btn-primary {
-            transition: background 0.3s ease, transform 0.2s ease;
-        }
+    .btn-primary {
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
 
-        .btn-primary:hover {
-            transform: scale(1.03);
-        }
+    .btn-primary:hover {
+      transform: scale(1.03);
+    }
 
-        .img-zoom {
-            transition: transform 0.4s ease;
-        }
+    .img-zoom {
+      transition: transform 0.4s ease;
+    }
 
-        .img-zoom:hover {
-            transform: scale(1.06);
-        }
-    </style>
+    .img-zoom:hover {
+      transform: scale(1.06);
+    }
+  </style>
 </head>
 
 <body class="bg-slate-50">
 
-    <div id="root"></div>
+  <div id="root"></div>
 
-    <!-- Pass product ID dari CI3 ke React -->
-    <script>
-        var PRODUCT_ID = parseInt(window.location.pathname.split('/').pop()) || 1;
-    </script>
+  <!-- Pass product ID dari CI3 ke React -->
+  <script>
+    var PRODUCT_ID = parseInt(window.location.pathname.split('/').pop()) || 1;
+  </script>
 
-    <script type="text/babel">
-        const { useState, useEffect } = React;
+  <script type="text/babel">
+    const { useState, useEffect } = React;
 
 // =====================
 // NAVBAR
@@ -305,34 +305,34 @@ function DetailProduk({ onAddCart }) {
 // =====================
 function Footer() {
   return (
-    <footer className="bg-slate-800 text-slate-300 mt-8">
+    <footer className="bg-slate-800 text-slate-300 mt-16">
       <div className="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <h3 className="text-white text-xl font-bold mb-3" style={{fontFamily:'Playfair Display, serif'}}>
-            Shop<span className="text-blue-400">Ku</span>
+              Shop<span className="text-blue-400">Ku</span>
           </h3>
           <p className="text-sm leading-relaxed">Platform belanja online terpercaya dengan ribuan produk pilihan.</p>
         </div>
         <div>
           <h4 className="text-white font-semibold mb-3">Navigasi</h4>
           <ul className="space-y-2 text-sm">
-            <li><a href="<?= base_url('home') ?>" className="hover:text-white transition">Home</a></li>
-            <li><a href="<?= base_url('katalog') ?>" className="hover:text-white transition">Katalog</a></li>
-            <li><a href="<?= base_url('cart') ?>" className="hover:text-white transition">Keranjang</a></li>
-            <li><a href="<?= base_url('login') ?>" className="hover:text-white transition">Login</a></li>
+              <li><a href="<?= base_url('home') ?>"    className="hover:text-white transition">Home</a></li>
+              <li><a href="<?= base_url('katalog') ?>" className="hover:text-white transition">Katalog</a></li>
+              <li><a href="<?= base_url('cart') ?>"    className="hover:text-white transition">Keranjang</a></li>
+              <li><a href="<?= base_url('login') ?>"   className="hover:text-white transition">Login</a></li>
           </ul>
         </div>
         <div>
           <h4 className="text-white font-semibold mb-3">Kontak</h4>
           <ul className="space-y-2 text-sm">
-            <li>📧 shopku@email.com</li>
-            <li>📱 0812-3456-7890</li>
-            <li>📍 Kudus, Jawa Tengah</li>
+              <li>📧 oiqgamink27@gmail.com</li>
+              <li>📱 0877-0445-1209</li>
+              <li>📍 AMIKOM    YOGYAKARTA</li>
           </ul>
         </div>
       </div>
       <div className="border-t border-slate-700 text-center py-4 text-sm text-slate-500">
-        © 2024 ShopKu. All rights reserved.
+          © 2026 ShopKu. All rights reserved.
       </div>
     </footer>
   );

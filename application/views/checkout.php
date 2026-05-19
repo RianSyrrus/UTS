@@ -191,7 +191,7 @@
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             <div className="sm:col-span-2">
                                 <label className="block text-xs font-semibold text-slate-500 mb-1.5">Nama Lengkap *</label>
-                                <input type="text" placeholder="Contoh: Budi Santoso"
+                                <input type="text" placeholder="Contoh: Oiq Gemink"
                                     value={data.nama} onChange={e => onChange('nama', e.target.value)}
                                     className={inputClass('nama')} />
                                 {errors.nama && <p className="text-red-500 text-xs mt-1">{errors.nama}</p>}
